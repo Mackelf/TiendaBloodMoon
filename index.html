@@ -98,6 +98,12 @@
       }
 
       /* ── Tabla Standing ── */
+      
+      .badge-gold   { background-color: #FFD700; color: #000; }
+      .badge-silver { background-color: #C0C0C0; color: #000; }
+      .badge-bronze { background-color: #CD7F32; color: #fff; }
+      .badge-green  { background-color: #198754; color: #fff; }
+
       .standing-table {
         width: 100%;
         border-collapse: collapse;
@@ -164,11 +170,32 @@
       }
 
       /* ── Metagame cards ── */
-      .meta-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-        gap: 1rem;
-      }
+      .meta-card-img {
+  height: 120px;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 4px 4px 0 0;
+  margin: -1.1rem -1.25rem 1rem -1.25rem;
+  position: relative;
+}
+
+.meta-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, var(--surface) 100%);
+  border-radius: 4px 4px 0 0;
+}
+
+.meta-deck-name a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.meta-deck-name a:hover {
+  text-decoration: underline;
+}
+    
 
       .meta-card {
         background: var(--surface);
@@ -183,7 +210,7 @@
       }
 
       .meta-deck-name {
-        font-size: 0.95rem;
+        font-size: 1.5 rem;
         font-weight: 600;
         color: var(--text);
         margin-bottom: 0.5rem;
@@ -242,10 +269,6 @@
         text-transform: uppercase;
       }
       
-      .badge-gold   { background-color: #FFD700; color: #000; }
-      .badge-silver { background-color: #C0C0C0; color: #000; }
-      .badge-bronze { background-color: #CD7F32; color: #fff; }
-      .badge-green  { background-color: #198754; color: #fff; }
             
 
     </style>
@@ -369,46 +392,60 @@
       };
 
       // ── Vista Metagame ──────────────────────────────────────────────────
-      const Metagame = {
-        template: `
-          <div>
-            <p class="view-title">Análisis</p>
-            <h1 class="view-heading">Metagame Breakdown</h1>
+const Metagame = {
+  template: `
+    <div>
+      <p class="view-title">Análisis</p>
+      <h1 class="view-heading">Metagame Breakdown</h1>
 
-            <div v-if="!store.loaded" class="loading-msg">Cargando datos…</div>
+      <div v-if="!store.loaded" class="loading-msg">Cargando datos…</div>
 
-            <div v-else class="meta-grid">
-              <div
-                class="meta-card"
-                v-for="d in deckStats"
-                :key="d.name"
-              >
-                <div class="meta-deck-name">{{ d.name }}</div>
+      <div v-else class="row g-3">
+        <div
+          class="col-12 col-md-6 col-lg-4"
+          v-for="d in deckStats"
+          :key="d.name"
+        >
+          <div class="meta-card h-100">
 
-                <div class="meta-row">
-                  <span>Copias jugadas</span>
-                  <span>{{ d.count }}</span>
-                </div>
-                <div class="meta-row">
-                  <span>Partidas (V / D / E)</span>
-                  <span>
-                    <span style="color:var(--win)">{{ d.wins }}</span> /
-                    <span style="color:var(--loss)">{{ d.losses }}</span> /
-                    <span style="color:var(--draw)">{{ d.draws }}</span>
-                  </span>
-                </div>
+            <div class="meta-card-img" :style="{ backgroundImage: 'url(' + d.img + ')' }"></div>
 
-                <div class="meta-wr">Win Rate</div>
-                <div class="meta-wr-value">{{ d.winrate }}%</div>
-
-                <!-- barra de presencia relativa al mazo más jugado -->
-                <div class="meta-presence">
-                  <div class="meta-presence-fill" :style="{ width: d.presence + '%' }"></div>
-                </div>
-              </div>
+            <div class="meta-deck-name">
+              <a v-if="d.url" :href="d.url" target="_blank" rel="noopener noreferrer">
+                {{ d.name }}
+              </a>
+              <span v-else>{{ d.name }}</span>
             </div>
+
+            <div class="meta-row">
+              <span>Copias jugadas</span>
+              <span>{{ d.count }}</span>
+            </div>
+            <div class="meta-row">
+              <span>Partidas (V / D / E)</span>
+              <span>
+                <span style="color:var(--win)">{{ d.wins }}</span> /
+                <span style="color:var(--loss)">{{ d.losses }}</span> /
+                <span style="color:var(--draw)">{{ d.draws }}</span>
+              </span>
+            </div>
+
+            <div class="meta-wr">Win Rate</div>
+            <div class="meta-wr-value">{{ d.winrate }}%</div>
+
+           <div class="meta-wr">Meta %</div>
+<div class="meta-wr-value">{{ d.presence }}%</div>
+
+    <div class="meta-presence">
+      <div class="meta-presence-fill" :style="{ width: d.presence + '%' }"></div>
+    </div>
+
           </div>
-        `,
+        </div>
+      </div>
+
+    </div>
+  `,
 
         
         setup() {
@@ -428,6 +465,8 @@
                   wins: 0,
                   losses: 0,
                   draws: 0,
+                  img: p.imgRoute?.replace(/\\\\/g, '/').replace(/\\/g, '/') ?? '',
+                  url: p.decklistUrl ?? '',
                 };
               }
               map[key].count++;
@@ -445,7 +484,7 @@
                 const total = d.wins + d.losses + d.draws;
                 const winrate =
                   total > 0 ? ((d.wins / total) * 100).toFixed(1) : "0.0";
-                const presence = Math.round((d.count / maxCount) * 100);
+                const presence = parseFloat(((d.count / store.players.length) * 100).toFixed(2));
                 return { ...d, winrate, presence };
               })
               .sort((a, b) => b.count - a.count || b.winrate - a.winrate);

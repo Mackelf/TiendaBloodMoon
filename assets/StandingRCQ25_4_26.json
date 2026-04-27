@@ -11,7 +11,7 @@
     "%JGO": "48.1%",
     "Decklist": "Domain Zoo",
     "keyCard": "Leyline of the Guildpact",
-    "imgRoute": ".\\Leyline.jpg",
+    "imgRoute": "./assets/Leyline.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NKiiof2WS8Y8KrJoVKw",
     "Badge": "1st"
   },
@@ -27,7 +27,7 @@
     "%JGO": "47.3%",
     "Decklist": "Eldrazi Tron",
     "keyCard": "Thought-Knot Seer",
-    "imgRoute": ".\\Knot.jpg",
+    "imgRoute": "./assets/Knot.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NcdMCfEa5y1hS3YhTtA",
     "Badge": "Top8"
   },
@@ -43,7 +43,7 @@
     "%JGO": "63.5%",
     "Decklist": "Izzet Affinity",
     "keyCard": "Kappa Cannoneer",
-    "imgRoute": ".\\Kappa.jpg",
+    "imgRoute": "./assets/Kappa.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NV2s6eZCmzZOFtychKg",
     "Badge": "Top4"
   },
@@ -59,7 +59,7 @@
     "%JGO": "49.3%",
     "Decklist": "Hammer Time",
     "keyCard": "Colossus Hammer",
-    "imgRoute": ".\\Hammer.jpg",
+    "imgRoute": "./assets/Hammer.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NZNaAeoiaw6z2C-Qvzw",
     "Badge": "Top4"
   },
@@ -75,7 +75,7 @@
     "%JGO": "59.5%",
     "Decklist": "Izzet Affinity",
     "keyCard": "Kappa Cannoneer",
-    "imgRoute": ".\\Kappa.jpg",
+    "imgRoute": "./assets/Kappa.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NguN7cNmtM7djDHAUYw",
     "Badge": "Top8"
   },
@@ -91,7 +91,7 @@
     "%JGO": "51.9%",
     "Decklist": "Jeskai Blink",
     "keyCard": "Phelia, Exuberant Shepherd",
-    "imgRoute": ".\\Phelia.jpg",
+    "imgRoute": "./assets/Phelia.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NoU-Dfs-igifv-jvhpw",
     "Badge": "Top8"
   },
@@ -107,7 +107,7 @@
     "%JGO": "49.8%",
     "Decklist": "NeoBrand",
     "keyCard": "Neoform",
-    "imgRoute": ".\\Neoform.jpg",
+    "imgRoute": "./assets/Neoform.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3NP1GgdU2IgNtPfeNjEA",
     "Badge": "2nd"
   },
@@ -123,7 +123,7 @@
     "%JGO": "59.7%",
     "Decklist": "Eldrazi Tron",
     "keyCard": "Thought-Knot Seer",
-    "imgRoute": ".\\Knot.jpg",
+    "imgRoute": "./assets/Knot.jpg",
     "decklistUrl": "https://manabox.app/decks/AZ3O6voddH2MH-fziMzC3Q",
     "Badge": "Top8"
   },
@@ -139,7 +139,7 @@
     "%JGO": "48.9%",
     "Decklist": "Mono Blue Belcher",
     "keyCard": "Goblin Charbelcher",
-    "imgRoute": ".\\Belcher.jpg",
+    "imgRoute": "./assets/Belcher.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -155,7 +155,7 @@
     "%JGO": "49.0%",
     "Decklist": "Amulet Titan",
     "keyCard": "Amulet of Vigor",
-    "imgRoute": ".\\Amulet.jpg",
+    "imgRoute": "./assets/Amulet.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -171,7 +171,7 @@
     "%JGO": "45.9%",
     "Decklist": "Domain Zoo",
     "keyCard": "Leyline of the Guildpact",
-    "imgRoute": ".\\Leyline.jpg",
+    "imgRoute": "./assets/Leyline.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -187,7 +187,7 @@
     "%JGO": "41.7%",
     "Decklist": "Dimir Midrange",
     "keyCard": "Psychic Frog",
-    "imgRoute": ".\\Frog.jpg",
+    "imgRoute": "./assets/Frog.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -203,7 +203,7 @@
     "%JGO": "40.2%",
     "Decklist": "Goryo's Vengeance",
     "keyCard": "Goryo's Vengeance\r",
-    "imgRoute": ".\\Goryo.jpg",
+    "imgRoute": "./assets/Goryo.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -219,7 +219,7 @@
     "%JGO": "60.1%",
     "Decklist": "Grixis Phoenix",
     "keyCard": "Arclight Phoenix",
-    "imgRoute": ".\\Archlight.jpg",
+    "imgRoute": "./assets/Archlight.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -235,7 +235,7 @@
     "%JGO": "53.5%",
     "Decklist": "Ruby Storm",
     "keyCard": "Ral, Monsoon Mage",
-    "imgRoute": ".\\Ral.jpg",
+    "imgRoute": "./assets/Ral.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -251,7 +251,7 @@
     "%JGO": "50.9%",
     "Decklist": "Izzet Affinity",
     "keyCard": "Kappa Cannoneer",
-    "imgRoute": ".\\Kappa.jpg",
+    "imgRoute": "./assets/Kappa.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -267,7 +267,7 @@
     "%JGO": "53.0%",
     "Decklist": "Eldrazi Tron",
     "keyCard": "Thought-Knot Seer",
-    "imgRoute": ".\\Knot.jpg",
+    "imgRoute": "./assets/Knot.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -283,7 +283,7 @@
     "%JGO": "46.8%",
     "Decklist": "Gruul Basking Broodscale Combo",
     "keyCard": "BroodScale",
-    "imgRoute": ".\\BroodScale.jpg",
+    "imgRoute": "./assets/BroodScale.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -299,7 +299,7 @@
     "%JGO": "44.6%",
     "Decklist": "Mono Blue Belcher",
     "keyCard": "Basking Broodscale",
-    "imgRoute": ".\\Belcher.jpg",
+    "imgRoute": "./assets/Belcher.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -315,7 +315,7 @@
     "%JGO": "42.1%",
     "Decklist": "Boros Energy",
     "keyCard": "Guide of Souls",
-    "imgRoute": ".\\Guide.jpg",
+    "imgRoute": "./assets/Guide.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -331,7 +331,7 @@
     "%JGO": "61.7%",
     "Decklist": "Izzet Prowess",
     "keyCard": "Slickshot Show-Off",
-    "imgRoute": ".\\Slick.jpg",
+    "imgRoute": "./assets/Slick.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -347,7 +347,7 @@
     "%JGO": "55.7%",
     "Decklist": "Mono Black Midrange",
     "keyCard": "Necrodominance",
-    "imgRoute": ".\\Necro.jpg",
+    "imgRoute": "./assets/Necro.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -363,7 +363,7 @@
     "%JGO": "46.8%",
     "Decklist": "Sultai Midrange",
     "keyCard": "Abhorrent Oculus",
-    "imgRoute": ".\\Oculus.jpg",
+    "imgRoute": "./assets/Oculus.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -379,7 +379,7 @@
     "%JGO": "47.0%",
     "Decklist": "Living End",
     "keyCard": "Living End",
-    "imgRoute": ".\\LivingEnd.jpg",
+    "imgRoute": "./assets/LivingEnd.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -395,7 +395,7 @@
     "%JGO": "55.8%",
     "Decklist": "Boros Energy",
     "keyCard": "Guide of Souls",
-    "imgRoute": ".\\Guide.jpg",
+    "imgRoute": "./assets/Guide.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -411,7 +411,7 @@
     "%JGO": "54.2%",
     "Decklist": "Zoo Reanimator",
     "keyCard": "Leyline of the Guildpact",
-    "imgRoute": ".\\Leyline.jpg",
+    "imgRoute": "./assets/Leyline.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   },
@@ -427,7 +427,7 @@
     "%JGO": "43.9%",
     "Decklist": "Izzet Affinity",
     "keyCard": "Kappa Cannoneer",
-    "imgRoute": ".\\Kappa.jpg",
+    "imgRoute": "./assets/Kappa.jpg",
     "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
     "Badge": ""
   }
