@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RCQ 2025 — Standing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <style>
+      :root {
+        --bg: #0d0f14;
+        --surface: #161920;
+        --surface-2: #1e2130;
+        --border: #2a2f45;
+        --text: #e2e6f0;
+        --muted: #7a8099;
+        --accent: #c89b3c;
+        --accent-dim: rgba(200, 155, 60, 0.12);
+        --win: #4ade80;
+        --loss: #f87171;
+        --draw: #94a3b8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: 'Georgia', serif;
+        margin: 0;
+      }
+
+      /* ── Navbar ── */
+      .navbar-custom {
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        padding: 0.75rem 0;
+      }
+
+      .navbar-brand-custom {
+        font-family: 'Georgia', serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent) !important;
+        text-decoration: none;
+      }
+
+      .nav-link-custom {
+        color: var(--muted) !important;
+        text-decoration: none;
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 0.4rem 0.9rem;
+        border-radius: 4px;
+        transition: color 0.2s, background 0.2s;
+      }
+
+      .nav-link-custom:hover,
+      .nav-link-custom.router-link-active {
+        color: var(--accent) !important;
+        background: var(--accent-dim);
+      }
+
+      /* ── Layout ── */
+      .main-container {
+        max-width: 960px;
+        margin: 2.5rem auto;
+        padding: 0 1rem;
+      }
+
+      .view-title {
+        font-size: 0.72rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 0.25rem;
+      }
+
+      .view-heading {
+        font-size: 1.6rem;
+        color: var(--text);
+        margin-bottom: 1.75rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.75rem;
+      }
+
+      /* ── Tabla Standing ── */
+      .standing-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.88rem;
+      }
+
+      .standing-table thead th {
+        background: var(--surface-2);
+        color: var(--muted);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.65rem 0.85rem;
+        border-bottom: 1px solid var(--border);
+        text-align: left;
+        font-weight: 400;
+        font-family: 'Georgia', serif;
+      }
+
+      .standing-table td {
+        padding: 0.6rem 0.85rem;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+      }
+
+      .standing-table tbody tr:hover {
+        background: var(--surface-2);
+      }
+
+      .place-badge {
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
+
+      .decklist-tag {
+        display: inline-block;
+        background: var(--accent-dim);
+        color: var(--accent);
+        font-size: 0.72rem;
+        padding: 0.15rem 0.5rem;
+        border-radius: 3px;
+        letter-spacing: 0.04em;
+      }
+
+      .stat-pts {
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      .stat-vde {
+        font-family: 'Georgia', serif;
+        letter-spacing: 0.04em;
+      }
+
+      .stat-v { color: var(--win); }
+      .stat-d { color: var(--loss); }
+      .stat-e { color: var(--draw); }
+
+
+      /* ── Metagame cards ── */
+      .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 1rem;
+      }
+
+      .meta-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 1.1rem 1.25rem;
+        transition: border-color 0.2s;
+      }
+
+      .meta-card:hover {
+        border-color: var(--accent);
+      }
+
+      .meta-deck-name {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+      }
+
+      .meta-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-bottom: 0.25rem;
+      }
+
+      .meta-row span:last-child {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .meta-wr {
+        margin-top: 0.65rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .meta-wr-value {
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+      }
+
+      .meta-presence {
+        height: 3px;
+        background: var(--border);
+        border-radius: 2px;
+        margin-top: 0.75rem;
+        overflow: hidden;
+      }
+
+      .meta-presence-fill {
+        height: 100%;
+        background: var(--accent);
+        border-radius: 2px;
+        opacity: 0.7;
+      }
+
+      /* ── Loading ── */
+      .loading-msg {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.85rem;
+        padding: 3rem 0;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navbar -->
+      <nav class="navbar-custom">
+        <div class="container d-flex align-items-center justify-content-between">
+          <router-link class="navbar-brand-custom" to="/">RCQ 2025</router-link>
+          <div class="d-flex gap-1">
+            <router-link class="nav-link-custom" to="/standing">
+              <i class="bi bi-trophy me-1"></i>Standing
+            </router-link>
+            <router-link class="nav-link-custom" to="/metagame">
+              <i class="bi bi-pie-chart me-1"></i>Metagame
+            </router-link>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Router view -->
+      <div class="main-container">
+        <router-view></router-view>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const { createApp, ref, computed, onMounted } = Vue;
+
+      // ── Store compartido (simple reactive state) ────────────────────────
+      const store = Vue.reactive({
+        players: [],
+        loaded: false,
+      });
+
+      async function loadData() {
+        if (store.loaded) return;
+        const res = await fetch('./assets/StandingRCQ25_4_26.json');
+        store.players = await res.json();
+        store.loaded = true;
+      }
+
+      // ── Vista Standing ──────────────────────────────────────────────────
+      const Standing = {
+        template: `
+          <div>
+            <p class="view-title">Torneo</p>
+            <h1 class="view-heading">Standing Final</h1>
+
+            <div v-if="!store.loaded" class="loading-msg">Cargando resultados…</div>
+
+            <table v-else class="standing-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Jugador</th>
+                  <th>Decklist</th>
+                  <th>Pts</th>
+                  <th>V</th>
+                  <th>D</th>
+                  <th>E</th>
+                  <th>%VPO</th>
+                  <th>%JG</th>
+                  <th>%JGO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="p in store.players" :key="p.Nombre">
+                  <td class="place-badge">{{ p.Place }}</td>
+                  <td>{{ p.Nombre }}</td>
+                  <td><span class="decklist-tag">{{ p.Decklist }}</span></td>
+                  <td class="stat-pts">{{ p.Puntos }}</td>
+                  <td class="stat-v">{{ p.V }}</td>
+                  <td class="stat-d">{{ p.D }}</td>
+                  <td class="stat-e">{{ p.E }}</td>
+                  <td>{{ p['%VPO'] }}</td>
+                  <td>{{ p['%JG'] }}</td>
+                  <td>{{ p['%JGO'] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        `,
+        setup() {
+          onMounted(loadData);
+          return { store };
+        },
+      };
+
+      // ── Vista Metagame ──────────────────────────────────────────────────
+      const Metagame = {
+        template: `
+          <div>
+            <p class="view-title">Análisis</p>
+            <h1 class="view-heading">Metagame Breakdown</h1>
+
+            <div v-if="!store.loaded" class="loading-msg">Cargando datos…</div>
+
+            <div v-else class="meta-grid">
+              <div
+                class="meta-card"
+                v-for="d in deckStats"
+                :key="d.name"
+              >
+                <div class="meta-deck-name">{{ d.name }}</div>
+
+                <div class="meta-row">
+                  <span>Copias jugadas</span>
+                  <span>{{ d.count }}</span>
+                </div>
+                <div class="meta-row">
+                  <span>Partidas (V / D / E)</span>
+                  <span>
+                    <span style="color:var(--win)">{{ d.wins }}</span> /
+                    <span style="color:var(--loss)">{{ d.losses }}</span> /
+                    <span style="color:var(--draw)">{{ d.draws }}</span>
+                  </span>
+                </div>
+
+                <div class="meta-wr">Win Rate</div>
+                <div class="meta-wr-value">{{ d.winrate }}%</div>
+
+                <!-- barra de presencia relativa al mazo más jugado -->
+                <div class="meta-presence">
+                  <div class="meta-presence-fill" :style="{ width: d.presence + '%' }"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        setup() {
+          onMounted(loadData);
+
+          const deckStats = computed(() => {
+            if (!store.loaded) return [];
+
+            // Agrupar por Decklist
+            const map = {};
+            for (const p of store.players) {
+              const key = p.Decklist;
+              if (!map[key]) {
+                map[key] = { name: key, count: 0, wins: 0, losses: 0, draws: 0 };
+              }
+              map[key].count++;
+              map[key].wins   += p.V;
+              map[key].losses += p.D;
+              map[key].draws  += p.E;
+            }
+
+            const maxCount = Math.max(...Object.values(map).map(d => d.count));
+
+            return Object.values(map)
+              .map(d => {
+                const total = d.wins + d.losses + d.draws;
+                const winrate = total > 0
+                  ? ((d.wins / total) * 100).toFixed(1)
+                  : '0.0';
+                const presence = Math.round((d.count / maxCount) * 100);
+                return { ...d, winrate, presence };
+              })
+              .sort((a, b) => b.count - a.count || b.winrate - a.winrate);
+          });
+
+          return { store, deckStats };
+        },
+      };
+
+      // ── Router ──────────────────────────────────────────────────────────
+      const routes = [
+        { path: '/',          redirect: '/standing' },
+        { path: '/standing',  component: Standing },
+        { path: '/metagame',  component: Metagame },
+      ];
+
+      const router = VueRouter.createRouter({
+        history: VueRouter.createWebHashHistory(),
+        routes,
+      });
+
+      // ── App ──────────────────────────────────────────────────────────────
+      const app = createApp({});
+      app.use(router);
+      app.mount('#app');
+    </script>
+  </body>
+</html>
