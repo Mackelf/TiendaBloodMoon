@@ -10,9 +10,9 @@
     "%JG": "81.8%",
     "%JGO": "48.1%",
     "Decklist": "Domain Zoo",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Leyline of the Guildpact",
+    "imgRoute": ".\\Leyline.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NKiiof2WS8Y8KrJoVKw"
   },
   {
     "Place": 2,
@@ -25,9 +25,9 @@
     "%JG": "75.0%",
     "%JGO": "47.3%",
     "Decklist": "Eldrazi Tron",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Thought-Knot Seer",
+    "imgRoute": ".\\Knot.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NcdMCfEa5y1hS3YhTtA"
   },
   {
     "Place": 3,
@@ -40,9 +40,9 @@
     "%JG": "53.3%",
     "%JGO": "63.5%",
     "Decklist": "Izzet Affinity",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Kappa Cannoneer",
+    "imgRoute": ".\\Kappa.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NV2s6eZCmzZOFtychKg"
   },
   {
     "Place": 4,
@@ -55,9 +55,9 @@
     "%JG": "57.1%",
     "%JGO": "49.3%",
     "Decklist": "Hammer Time",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Colossus Hammer",
+    "imgRoute": ".\\Hammer.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NZNaAeoiaw6z2C-Qvzw"
   },
   {
     "Place": 5,
@@ -70,9 +70,9 @@
     "%JG": "58.3%",
     "%JGO": "59.5%",
     "Decklist": "Izzet Affinity",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Kappa Cannoneer",
+    "imgRoute": ".\\Kappa.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NguN7cNmtM7djDHAUYw"
   },
   {
     "Place": 6,
@@ -85,9 +85,9 @@
     "%JG": "53.3%",
     "%JGO": "51.9%",
     "Decklist": "Jeskai Blink",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Phelia, Exuberant Shepherd",
+    "imgRoute": ".\\Phelia.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NoU-Dfs-igifv-jvhpw"
   },
   {
     "Place": 7,
@@ -100,9 +100,9 @@
     "%JG": "66.7%",
     "%JGO": "49.8%",
     "Decklist": "NeoBrand",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Neoform",
+    "imgRoute": ".\\Neoform.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3NP1GgdU2IgNtPfeNjEA"
   },
   {
     "Place": 8,
@@ -115,9 +115,9 @@
     "%JG": "53.8%",
     "%JGO": "59.7%",
     "Decklist": "Eldrazi Tron",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Thought-Knot Seer",
+    "imgRoute": ".\\Knot.jpg",
+    "decklistUrl": "https://manabox.app/decks/AZ3O6voddH2MH-fziMzC3Q"
   },
   {
     "Place": 9,
@@ -130,9 +130,9 @@
     "%JG": "58.3%",
     "%JGO": "48.9%",
     "Decklist": "Mono Blue Belcher",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Goblin Charbelcher",
+    "imgRoute": ".\\Belcher.jpg",
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 10,
@@ -147,7 +147,7 @@
     "Decklist": "Amulet Titan",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 11,
@@ -162,7 +162,7 @@
     "Decklist": "Domain Zoo",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 12,
@@ -177,7 +177,7 @@
     "Decklist": "Dimir Midrange",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 13,
@@ -191,8 +191,8 @@
     "%JGO": "40.2%",
     "Decklist": "Goryo's Vengeance",
     "keyCard": "Goryo's Vengeance\r",
-    "imgRoute": ".\\Goryo.png",
-    "decklistUrl": ""
+    "imgRoute": ".\\Goryo.jpg",
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 14,
@@ -207,7 +207,7 @@
     "Decklist": "Grixis Phoenix",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 15,
@@ -222,7 +222,7 @@
     "Decklist": "Ruby Storm",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 16,
@@ -235,9 +235,9 @@
     "%JG": "50.0%",
     "%JGO": "50.9%",
     "Decklist": "Izzet Affinity",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Kappa Cannoneer",
+    "imgRoute": ".\\Kappa.jpg",
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 17,
@@ -252,7 +252,7 @@
     "Decklist": "Mono Black Tron",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 18,
@@ -267,7 +267,7 @@
     "Decklist": "Gruul Basking Broodscale Combo",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 19,
@@ -280,9 +280,9 @@
     "%JG": "33.3%",
     "%JGO": "44.6%",
     "Decklist": "Mono Blue Belcher",
-    "keyCard": "",
-    "imgRoute": "",
-    "decklistUrl": ""
+    "keyCard": "Goblin Charbelcher",
+    "imgRoute": ".\\Belcher.jpg",
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 20,
@@ -297,7 +297,7 @@
     "Decklist": "Boros Energy",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 21,
@@ -312,7 +312,7 @@
     "Decklist": "Izzet Prowess",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 22,
@@ -327,7 +327,7 @@
     "Decklist": "Mono Black Midrange",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 23,
@@ -342,7 +342,7 @@
     "Decklist": "Sultai Midrange",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 24,
@@ -357,7 +357,7 @@
     "Decklist": "Living End",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 25,
@@ -372,7 +372,7 @@
     "Decklist": "Boros Energy",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 26,
@@ -387,7 +387,7 @@
     "Decklist": "Zoo Reanimator",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   },
   {
     "Place": 27,
@@ -402,6 +402,6 @@
     "Decklist": "Izzet Affinity",
     "keyCard": "",
     "imgRoute": "",
-    "decklistUrl": ""
+    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h"
   }
 ]
