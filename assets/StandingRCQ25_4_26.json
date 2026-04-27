@@ -10,7 +10,9 @@
     "%JG": "81.8%",
     "%JGO": "48.1%",
     "Decklist": "Domain Zoo",
-    "place": "1👑"
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 2,
@@ -22,7 +24,10 @@
     "%VPO": "53.3%",
     "%JG": "75.0%",
     "%JGO": "47.3%",
-    "Decklist": "Eldrazi Tron"
+    "Decklist": "Eldrazi Tron",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 3,
@@ -34,7 +39,10 @@
     "%VPO": "69.3%",
     "%JG": "53.3%",
     "%JGO": "63.5%",
-    "Decklist": "Izzet Affinity"
+    "Decklist": "Izzet Affinity",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 4,
@@ -46,7 +54,10 @@
     "%VPO": "54.7%",
     "%JG": "57.1%",
     "%JGO": "49.3%",
-    "Decklist": "Hammer Time"
+    "Decklist": "Hammer Time",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 5,
@@ -58,7 +69,10 @@
     "%VPO": "61.3%",
     "%JG": "58.3%",
     "%JGO": "59.5%",
-    "Decklist": "Izzet Affinity"
+    "Decklist": "Izzet Affinity",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 6,
@@ -70,7 +84,10 @@
     "%VPO": "60.0%",
     "%JG": "53.3%",
     "%JGO": "51.9%",
-    "Decklist": "Jeskai Blink"
+    "Decklist": "Jeskai Blink",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 7,
@@ -82,7 +99,10 @@
     "%VPO": "54.7%",
     "%JG": "66.7%",
     "%JGO": "49.8%",
-    "Decklist": "NeoBrand"
+    "Decklist": "NeoBrand",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 8,
@@ -94,7 +114,10 @@
     "%VPO": "61.3%",
     "%JG": "53.8%",
     "%JGO": "59.7%",
-    "Decklist": "Eldrazi Tron"
+    "Decklist": "Eldrazi Tron",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 9,
@@ -106,7 +129,10 @@
     "%VPO": "51.7%",
     "%JG": "58.3%",
     "%JGO": "48.9%",
-    "Decklist": "Mono Blue Belcher"
+    "Decklist": "Mono Blue Belcher",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 10,
@@ -118,7 +144,10 @@
     "%VPO": "49.3%",
     "%JG": "58.3%",
     "%JGO": "49.0%",
-    "Decklist": "Amulet Titan"
+    "Decklist": "Amulet Titan",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 11,
@@ -130,7 +159,10 @@
     "%VPO": "48.0%",
     "%JG": "57.1%",
     "%JGO": "45.9%",
-    "Decklist": "Domain Zoo"
+    "Decklist": "Domain Zoo",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 12,
@@ -142,7 +174,10 @@
     "%VPO": "42.7%",
     "%JG": "54.5%",
     "%JGO": "41.7%",
-    "Decklist": "Dimir Midrange"
+    "Decklist": "Dimir Midrange",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 13,
@@ -154,7 +189,10 @@
     "%VPO": "36.0%",
     "%JG": "60.0%",
     "%JGO": "40.2%",
-    "Decklist": "Goryo's Vengeance"
+    "Decklist": "Goryo's Vengeance",
+    "keyCard": "Goryo's Vengeance\r",
+    "imgRoute": ".\\Goryo.png",
+    "decklistUrl": ""
   },
   {
     "Place": 14,
@@ -166,7 +204,10 @@
     "%VPO": "61.3%",
     "%JG": "41.7%",
     "%JGO": "60.1%",
-    "Decklist": "Grixis Phoenix"
+    "Decklist": "Grixis Phoenix",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 15,
@@ -178,7 +219,10 @@
     "%VPO": "54.7%",
     "%JG": "33.3%",
     "%JGO": "53.5%",
-    "Decklist": "Ruby Storm"
+    "Decklist": "Ruby Storm",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 16,
@@ -190,7 +234,10 @@
     "%VPO": "52.0%",
     "%JG": "50.0%",
     "%JGO": "50.9%",
-    "Decklist": "Izzet Affinity"
+    "Decklist": "Izzet Affinity",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 17,
@@ -202,7 +249,10 @@
     "%VPO": "52.0%",
     "%JG": "41.7%",
     "%JGO": "53.0%",
-    "Decklist": "Mono Black Tron"
+    "Decklist": "Mono Black Tron",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 18,
@@ -214,7 +264,10 @@
     "%VPO": "48.3%",
     "%JG": "50.0%",
     "%JGO": "46.8%",
-    "Decklist": "Gruul Basking Broodscale Combo"
+    "Decklist": "Gruul Basking Broodscale Combo",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 19,
@@ -226,7 +279,10 @@
     "%VPO": "46.7%",
     "%JG": "33.3%",
     "%JGO": "44.6%",
-    "Decklist": "Mono Blue Belcher"
+    "Decklist": "Mono Blue Belcher",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 20,
@@ -238,7 +294,10 @@
     "%VPO": "41.7%",
     "%JG": "33.3%",
     "%JGO": "42.1%",
-    "Decklist": "Boros Energy"
+    "Decklist": "Boros Energy",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 21,
@@ -250,7 +309,10 @@
     "%VPO": "68.3%",
     "%JG": "33.3%",
     "%JGO": "61.7%",
-    "Decklist": "Izzet Prowess"
+    "Decklist": "Izzet Prowess",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 22,
@@ -262,7 +324,10 @@
     "%VPO": "53.3%",
     "%JG": "42.9%",
     "%JGO": "55.7%",
-    "Decklist": "Mono Black Midrange"
+    "Decklist": "Mono Black Midrange",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 23,
@@ -274,7 +339,10 @@
     "%VPO": "51.1%",
     "%JG": "40.0%",
     "%JGO": "46.8%",
-    "Decklist": "Sultai Midrange"
+    "Decklist": "Sultai Midrange",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 24,
@@ -286,7 +354,10 @@
     "%VPO": "48.3%",
     "%JG": "33.3%",
     "%JGO": "47.0%",
-    "Decklist": "Living End"
+    "Decklist": "Living End",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 25,
@@ -298,7 +369,10 @@
     "%VPO": "66.7%",
     "%JG": "33.3%",
     "%JGO": "55.8%",
-    "Decklist": "Boros Energy"
+    "Decklist": "Boros Energy",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 26,
@@ -310,7 +384,10 @@
     "%VPO": "50.0%",
     "%JG": "33.3%",
     "%JGO": "54.2%",
-    "Decklist": "Zoo Reanimator"
+    "Decklist": "Zoo Reanimator",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   },
   {
     "Place": 27,
@@ -322,6 +399,9 @@
     "%VPO": "50.0%",
     "%JG": "33.3%",
     "%JGO": "43.9%",
-    "Decklist": "Izzet Affinity"
+    "Decklist": "Izzet Affinity",
+    "keyCard": "",
+    "imgRoute": "",
+    "decklistUrl": ""
   }
 ]
