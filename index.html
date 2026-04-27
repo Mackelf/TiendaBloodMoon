@@ -241,22 +241,33 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
+      
+      .badge-gold   { background-color: #FFD700; color: #000; }
+      .badge-silver { background-color: #C0C0C0; color: #000; }
+      .badge-bronze { background-color: #CD7F32; color: #fff; }
+      .badge-green  { background-color: #198754; color: #fff; }
+            
+
     </style>
   </head>
   <body>
     <div id="app">
+      <div><img src="https://www.bloodmoongames.cl/wp-content/uploads/2024/09/Logo-2048x504.png" alt="Logo BloodMoon" class="img-fluid" style="height: 100px;">
       <!-- Navbar -->
       <nav class="navbar-custom">
         <div
           class="container d-flex align-items-center justify-content-between"
         >
-          <router-link class="navbar-brand-custom" to="/">RCQ 2025</router-link>
+          <router-link class="navbar-brand-custom" to="/">RCQ 2026</router-link>
           <div class="d-flex gap-1">
             <router-link class="nav-link-custom" to="/standing">
               <i class="bi bi-trophy me-1"></i>Standing
             </router-link>
             <router-link class="nav-link-custom" to="/metagame">
               <i class="bi bi-pie-chart me-1"></i>Metagame
+            </router-link>
+            <router-link class="nav-link-custom" to="/social">
+              <i class="bi bi-people me-1"></i>Social
             </router-link>
           </div>
         </div>
@@ -290,7 +301,7 @@
         template: `
           <div>
             <p class="view-title">Torneo</p>
-            <h1 class="view-heading">Standing Final</h1>
+            <h1 class="view-heading">Standing Ronda 5</h1>
 
             <div v-if="!store.loaded" class="loading-msg">Cargando resultados…</div>
 
@@ -311,14 +322,22 @@
               </thead>
               <tbody>
                 <tr v-for="p in store.players" :key="p.Nombre">
-                  <td class="place-badge">{{ p.Place }}</td>
-                  <td>{{ p.Nombre }}</td>
+               <td class="place-badge">{{ p.Place }}</td>
+<td>
+  {{ p.Nombre }}
+  <span v-if="p.Badge" class="badge rounded-pill me-1" :class="badgeClass(p.Badge)">
+    {{ p.Badge }}
+  </span>
+  
+</td>
                   <td>
                     <a :href="p.decklistUrl" target="_blank" rel="noopener noreferrer">
                       <span class="decklist-tag">{{ p.Decklist }}</span>
                     </a>
                   </td>
-                  <td class="stat-pts">{{ p.Puntos }}</td>
+                  <td class="stat-pts">
+                    
+                    {{ p.Puntos }}</td>
                   <td class="stat-v">{{ p.V }}</td>
                   <td class="stat-d">{{ p.D }}</td>
                   <td class="stat-e">{{ p.E }}</td>
@@ -330,7 +349,20 @@
             </table>
           </div>
         `,
+        
+        methods: {
+    badgeClass(badge) {
+      const map = {
+        '1st':  'badge-gold',
+        '2nd':  'badge-silver',
+        'Top4': 'badge-bronze',
+        'Top8': 'badge-green',
+      }
+      return map[badge] || ''
+    }
+  },
         setup() {
+          
           onMounted(loadData);
           return { store };
         },
@@ -377,6 +409,8 @@
             </div>
           </div>
         `,
+
+        
         setup() {
           onMounted(loadData);
 
@@ -421,11 +455,19 @@
         },
       };
 
-      // ── Router ──────────────────────────────────────────────────────────
+      const Social = {
+        template: `
+          <div>
+            <p class="view-title">Comunidad</p>
+            <h1 class="view-heading">Redes Sociales</h1>
+          </div>
+        `,
+      };      // ── Router ──────────────────────────────────────────────────────────
       const routes = [
         { path: "/", redirect: "/standing" },
         { path: "/standing", component: Standing },
         { path: "/metagame", component: Metagame },
+        { path: "/social", component: Social },
       ];
 
       const router = VueRouter.createRouter({
