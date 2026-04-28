@@ -302,7 +302,7 @@ footer a:hover {
   </head>
   <body>
     <div id="app">
-      <div><img src="https://www.bloodmoongames.cl/wp-content/uploads/2024/09/Logo-2048x504.png" alt="Logo BloodMoon" class="img-fluid" style="height: 100px;">
+      <div><img src="https://www.bloodmoongames.cl/wp-content/uploads/2024/09/Logo-2048x504.png" alt="Logo BloodMoon" class="img-fluid" style="height: 100px;"></div>
       <!-- Navbar -->
       <nav class="navbar-custom">
         <div
@@ -330,7 +330,7 @@ footer a:hover {
     </div>
 
 
-    <footer>Mario Canto. 2026</footer>
+    <footer>Mario Canto. 2026. PandaComboMtg</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -440,12 +440,22 @@ const Metagame = {
 
             <div class="meta-card-img" :style="{ backgroundImage: 'url(' + d.img + ')' }"></div>
 
-            <div class="meta-deck-name">
-              <a v-if="d.url" :href="d.url" target="_blank" rel="noopener noreferrer">
-                {{ d.name }}
-              </a>
-              <span v-else>{{ d.name }}</span>
-            </div>
+      <div class="meta-deck-name">
+  <!-- badges del arquetipo -->
+  <span
+    v-for="(qty, badge) in d.badges"
+    :key="badge"
+    class="badge rounded-pill me-1"
+    :class="badgeClass(badge)"
+  >
+    {{ qty > 1 ? qty + 'x ' : '' }}{{ badge }}
+  </span>
+
+  <a v-if="d.url" :href="d.url" target="_blank" rel="noopener noreferrer">
+    {{ d.name }}
+  </a>
+  <span v-else>{{ d.name }}</span>
+</div>
 
             <div class="meta-row">
               <span>Copias jugadas</span>
@@ -477,6 +487,17 @@ const Metagame = {
     </div>
   `,
 
+methods: {
+    badgeClass(badge) {
+      const map = {
+        '1st':  'badge-gold',
+        '2nd':  'badge-silver',
+        'Top4': 'badge-bronze',
+        'Top8': 'badge-green',
+      }
+      return map[badge] || ''
+    }
+  },
         
         setup() {
           onMounted(loadData);
@@ -497,12 +518,18 @@ const Metagame = {
                   draws: 0,
                   img: p.imgRoute?.replace(/\\\\/g, '/').replace(/\\/g, '/') ?? '',
                   url: p.decklistUrl ?? '',
+                  badges: {},
                 };
               }
               map[key].count++;
               map[key].wins += p.V;
               map[key].losses += p.D;
               map[key].draws += p.E;
+
+              // acumular badges
+            if (p.Badge) {
+              map[key].badges[p.Badge] = (map[key].badges[p.Badge] || 0) + 1;
+}
             }
 
             const maxCount = Math.max(
