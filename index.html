@@ -275,6 +275,18 @@
   text-align: center;
   font-family: sans-serif;
 }
+.social-link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: var(--accent);
+}
+
 footer a {
   color: #aaa;
   text-decoration: none;
@@ -519,6 +531,17 @@ const Metagame = {
     <div>
       <p class="view-title">Comunidad</p>
       <h1 class="view-heading">Redes Sociales</h1>
+      <div class="d-flex gap-3 mb-4">
+  <a href="https://instagram.com/tiendabloodmoon" target="_blank" class="social-link">
+    <i class="bi bi-instagram me-1"></i>tiendabloodmoon
+  </a>
+  <a href="https://instagram.com/pandacombomtg" target="_blank" class="social-link">
+    <i class="bi bi-instagram me-1"></i>pandacombomtg
+  </a>
+  <a href="https://www.facebook.com/groups/423462367843879" target="_blank" class="social-link">
+    <i class="bi bi-facebook me-1"></i>Daily Modern
+  </a>
+</div>
 
       <!-- Entrevista -->
       <div class="card bg-dark border-secondary shadow-sm mb-4">
