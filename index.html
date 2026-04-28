@@ -20,7 +20,7 @@
         --surface-2: #1e2130;
         --border: #2a2f45;
         --text: #fdfdff;
-        --muted: #7a8099;
+        --muted: #c8cdd8;
         --accent: #c89b3c;
         --accent-dim: rgba(200, 155, 60, 0.12);
         --win: #4ade80;
@@ -98,11 +98,23 @@
       }
 
       /* ── Tabla Standing ── */
-      
-      .badge-gold   { background-color: #FFD700; color: #000; }
-      .badge-silver { background-color: #C0C0C0; color: #000; }
-      .badge-bronze { background-color: #CD7F32; color: #fff; }
-      .badge-green  { background-color: #198754; color: #fff; }
+
+      .badge-gold {
+        background-color: #ffd700;
+        color: #000;
+      }
+      .badge-silver {
+        background-color: #c0c0c0;
+        color: #000;
+      }
+      .badge-bronze {
+        background-color: #cd7f32;
+        color: #fff;
+      }
+      .badge-green {
+        background-color: #198754;
+        color: #fff;
+      }
 
       .standing-table {
         width: 100%;
@@ -171,31 +183,34 @@
 
       /* ── Metagame cards ── */
       .meta-card-img {
-  height: 120px;
-  background-size: cover;
-  background-position: center top;
-  border-radius: 4px 4px 0 0;
-  margin: -1.1rem -1.25rem 1rem -1.25rem;
-  position: relative;
-}
+        height: 120px;
+        background-size: cover;
+        background-position: center top;
+        border-radius: 4px 4px 0 0;
+        margin: -1.1rem -1.25rem 1rem -1.25rem;
+        position: relative;
+      }
 
-.meta-card-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, var(--surface) 100%);
-  border-radius: 4px 4px 0 0;
-}
+      .meta-card-img::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          transparent 40%,
+          var(--surface) 100%
+        );
+        border-radius: 4px 4px 0 0;
+      }
 
-.meta-deck-name a {
-  color: var(--accent);
-  text-decoration: none;
-}
+      .meta-deck-name a {
+        color: var(--accent);
+        text-decoration: none;
+      }
 
-.meta-deck-name a:hover {
-  text-decoration: underline;
-}
-    
+      .meta-deck-name a:hover {
+        text-decoration: underline;
+      }
 
       .meta-card {
         background: var(--surface);
@@ -269,40 +284,60 @@
         text-transform: uppercase;
       }
       footer {
-  background-color: #000;
-  color: #fff;
-  padding: 40px 20px;
-  text-align: center;
-  font-family: sans-serif;
-}
-.social-link {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  transition: color 0.2s;
-}
-
-.social-link:hover {
-  color: var(--accent);
-}
-
-footer a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-footer a:hover {
-  color: #fff;
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .social-link {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.82rem;
+        letter-spacing: 0.06em;
+        transition: color 0.2s;
+      }
+   .text-muted-social {
+  color: #c8cdd8;
 }
 
-            
+.interview-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center top;
+}
 
+@media (min-width: 768px) {
+  .interview-img {
+    height: 100%;
+  }
+}
+
+      .social-link:hover {
+        color: var(--accent);
+      }
+
+      footer a {
+        color: #aaa;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      footer a:hover {
+        color: #fff;
+      }
     </style>
   </head>
   <body>
     <div id="app">
-      <div><img src="https://www.bloodmoongames.cl/wp-content/uploads/2024/09/Logo-2048x504.png" alt="Logo BloodMoon" class="img-fluid" style="height: 100px;"></div>
+      <div>
+        <img
+          src="https://www.bloodmoongames.cl/wp-content/uploads/2024/09/Logo-2048x504.png"
+          alt="Logo BloodMoon"
+          class="img-fluid"
+          style="height: 100px"
+        />
+      </div>
       <!-- Navbar -->
       <nav class="navbar-custom">
         <div
@@ -328,7 +363,6 @@ footer a:hover {
         <router-view></router-view>
       </div>
     </div>
-
 
     <footer>Mario Canto. 2026. PandaComboMtg</footer>
 
@@ -402,28 +436,27 @@ footer a:hover {
             </table>
           </div>
         `,
-        
+
         methods: {
-    badgeClass(badge) {
-      const map = {
-        '1st':  'badge-gold',
-        '2nd':  'badge-silver',
-        'Top4': 'badge-bronze',
-        'Top8': 'badge-green',
-      }
-      return map[badge] || ''
-    }
-  },
+          badgeClass(badge) {
+            const map = {
+              "1st": "badge-gold",
+              "2nd": "badge-silver",
+              Top4: "badge-bronze",
+              Top8: "badge-green",
+            };
+            return map[badge] || "";
+          },
+        },
         setup() {
-          
           onMounted(loadData);
           return { store };
         },
       };
 
       // ── Vista Metagame ──────────────────────────────────────────────────
-const Metagame = {
-  template: `
+      const Metagame = {
+        template: `
     <div>
       <p class="view-title">Análisis</p>
       <h1 class="view-heading">Metagame Breakdown</h1>
@@ -459,15 +492,17 @@ const Metagame = {
 
             <div class="meta-row">
               <span>Copias jugadas</span>
-              <span>{{ d.count }}</span>
+              <h5><span>{{ d.count }}</span></h5>
             </div>
             <div class="meta-row">
               <span>Partidas (V / D / E)</span>
               <span>
+                <h6>
                 <span style="color:var(--win)">{{ d.wins }}</span> /
                 <span style="color:var(--loss)">{{ d.losses }}</span> /
                 <span style="color:var(--draw)">{{ d.draws }}</span>
               </span>
+              </h6>
             </div>
 
             <div class="meta-wr">Win Rate</div>
@@ -487,18 +522,18 @@ const Metagame = {
     </div>
   `,
 
-methods: {
-    badgeClass(badge) {
-      const map = {
-        '1st':  'badge-gold',
-        '2nd':  'badge-silver',
-        'Top4': 'badge-bronze',
-        'Top8': 'badge-green',
-      }
-      return map[badge] || ''
-    }
-  },
-        
+        methods: {
+          badgeClass(badge) {
+            const map = {
+              "1st": "badge-gold",
+              "2nd": "badge-silver",
+              Top4: "badge-bronze",
+              Top8: "badge-green",
+            };
+            return map[badge] || "";
+          },
+        },
+
         setup() {
           onMounted(loadData);
 
@@ -516,8 +551,9 @@ methods: {
                   wins: 0,
                   losses: 0,
                   draws: 0,
-                  img: p.imgRoute?.replace(/\\\\/g, '/').replace(/\\/g, '/') ?? '',
-                  url: p.decklistUrl ?? '',
+                  img:
+                    p.imgRoute?.replace(/\\\\/g, "/").replace(/\\/g, "/") ?? "",
+                  url: p.decklistUrl ?? "",
                   badges: {},
                 };
               }
@@ -527,9 +563,9 @@ methods: {
               map[key].draws += p.E;
 
               // acumular badges
-            if (p.Badge) {
-              map[key].badges[p.Badge] = (map[key].badges[p.Badge] || 0) + 1;
-}
+              if (p.Badge) {
+                map[key].badges[p.Badge] = (map[key].badges[p.Badge] || 0) + 1;
+              }
             }
 
             const maxCount = Math.max(
@@ -541,7 +577,9 @@ methods: {
                 const total = d.wins + d.losses + d.draws;
                 const winrate =
                   total > 0 ? ((d.wins / total) * 100).toFixed(1) : "0.0";
-                const presence = parseFloat(((d.count / store.players.length) * 100).toFixed(2));
+                const presence = parseFloat(
+                  ((d.count / store.players.length) * 100).toFixed(2),
+                );
                 return { ...d, winrate, presence };
               })
               .sort((a, b) => b.count - a.count || b.winrate - a.winrate);
@@ -551,9 +589,8 @@ methods: {
         },
       };
 
- const Social = {
-  
-  template: `
+      const Social = {
+        template: `
   
     <div>
       <p class="view-title">Comunidad</p>
@@ -570,37 +607,68 @@ methods: {
   </a>
 </div>
 
-      <!-- Entrevista -->
-      <div class="card bg-dark border-secondary shadow-sm mb-4">
-        <div class="row g-0">
-          <div class="col-md-3">
-            <img
-              src="./assets/HLobosPortrait.png"
-              alt="Hernán Lobos"
-              class="img-fluid rounded-start h-100"
-              style="object-fit: cover;"
-            >
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title" style="color: var(--accent);">Hernán Lobos</h5>
-              <p class="text-muted mb-3" style="font-size:0.8rem;">Piloto de Eldrazi Tron</p>
-            <h6 class="card-subtitle mb-2 fs-6" style="color: var(--text);">
-                ¿Qué te motivó a jugar Eldrazi Tron para este RCQ?
-              </h6>
-              <blockquote class="blockquote" style="font-size:0.95rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 1rem;">
-                "Escogí ese mazo porque me gusta... Creo que responde bien por su versatilidad, el potencial de toolbox gracias a
-                <a href="https://scryfall.com/card/rvr/1/karn-the-great-creator" target="_blank" style="color:var(--accent);">Karn the Great Creator</a>.
-                El desafío más interesante es buscar un equilibrio para interacciones tempranas. Chalice of the Void es una buena adición, pero tengo dudas en la cantidad uno o dos.
-                Uno funcionó bien , pero no lo vi mucho, así que en mis proximos testeos incluiré una segunda copia.
-                Mi otra alternativa es jugar con más
-                <a href="https://scryfall.com/card/cmm/812/warping-wail" target="_blank" style="color:var(--accent);">Warping Wail</a>, Una de las dificultadres mayores del mazo es remover Drops uno, tale como Ragavan, Tamiyo, y con esta carta podemos detener la carrera de Boros Energy, sacando Guide of souls entre otros.
-                
-              </blockquote>
-            </div>
-          </div>
-        </div>
+    <!-- Entrevista 1 — foto izquierda -->
+<div class="card bg-dark border-secondary shadow-sm mb-4">
+  <div class="row g-0 flex-column flex-md-row">
+    <div class="col-12 col-md-3">
+      <img src="./assets/HLobosPortrait.png" alt="Hernán Lobos" class="interview-img rounded-top rounded-md-start">
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="card-body">
+        <h5 class="card-title" style="color: var(--accent);">Hernán Lobos</h5>
+        <p class="text-muted-social mb-3" style="font-size:0.8rem;">Piloto de Eldrazi Tron</p>
+        <h6 class="card-subtitle mb-2 fs-6" style="color: var(--text);">¿Qué te motivó a jugar Eldrazi Tron para este RCQ?</h6>
+        <blockquote class="blockquote" style="font-size:0.95rem; color: #c8cdd8; border-left: 3px solid var(--accent); padding-left: 1rem;">
+          "Escogí ese mazo porque me gusta... Creo que responde bien por su versatilidad, el potencial de toolbox gracias a
+          <a href="https://scryfall.com/card/rvr/1/karn-the-great-creator" target="_blank" style="color:var(--accent);">Karn the Great Creator</a>.
+          El desafío más interesante es buscar un equilibrio para interacciones tempranas. Chalice of the Void es una buena adición, pero tengo dudas en la cantidad uno o dos.
+          Uno funcionó bien, pero no lo vi mucho, así que en mis próximos testeos incluiré una segunda copia.
+          Mi otra alternativa es jugar con más
+          <a href="https://scryfall.com/card/cmm/812/warping-wail" target="_blank" style="color:var(--accent);">Warping Wail</a>.
+          Una de las dificultades mayores del mazo es remover drops de uno como Ragavan o Tamiyo, y con esta carta podemos detener la carrera de Boros Energy."
+        </blockquote>
+      <a href=" https://www.instagram.com/teamlatinos.mtg/" target="_blank" class="social-link">
+    <i class="bi bi-instagram me-1"></i>Team Latinos
+  </a>
+       
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Entrevista 2 — foto derecha (invertido en desktop) -->
+<div class="card bg-dark border-secondary shadow-sm mb-4">
+  <div class="row g-0 flex-column flex-md-row-reverse">
+    <div class="col-12 col-md-3">
+      <img src="./assets/FMirandaPortrait.png" alt="Francisco A. Miranda" class="interview-img rounded-top rounded-md-end">
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="card-body">
+        <h5 class="card-title" style="color: var(--accent);">Francisco Miranda</h5>
+        <p class="text-muted-social mb-1" style="font-size:0.8rem;"><strong>Clasificado RCQ BloodMoon</strong> · Piloto de Zoo Domain</p>
+        <p class="text-muted-social mb-3" style="font-size:0.78rem;">
+          Jugando desde 2018 · <strong>Clasificaciones previas</strong>: En la gran mayoría que se han celebrado. Falté solo a los primeros 2 SAMS ·
+          <strong>Mejor torneo</strong>: RC Modern 6-1-1 con Zoo y 6-2 con Boros Energy (ambos Top 16)
+        </p>
+        <h6 class="card-subtitle mb-2 fs-6" style="color: var(--text);">¿Qué te motivó a jugar Domain Zoo para este RCQ?</h6>
+        <blockquote class="blockquote" style="font-size:0.95rem; color: #c8cdd8; border-left: 3px solid var(--accent); padding-left: 1rem;">
+          "Venía de dos qualis jugando Boros Energy, en ambos perdí en semis y en el win and in. Además la serie de mazos combo como Ruby, Belcher y Neobrand son un problema para el tier1 actual, así que cambié a Zoo que tiene mejor matchup contra ellos.
+          Adapté la lista al meta local esperando Boros Energy, Affinity, Jeskai Blink y Amulet Titan — incluí Prismatic Ending al main y el tercer Stubborn Denial en desmedro de Consign.
+          En el side metí Damping Sphere y Void Mirror contra Tron, que sirvieron mucho. La predicción del meta no fue exacta — llegó mucho Eldrazi Tron — pero el deck se portó increíble y el plan de side funcionó."
+        </blockquote>
+        <h6 class="card-subtitle mb-2 fs-6" style="color: var(--text);">¿Cómo te vas a preparar para el regional?</h6>
+        <blockquote class="blockquote" style="font-size:0.95rem; color: #c8cdd8; border-left: 3px solid var(--accent); padding-left: 1rem;">
+          "Testeo en tiendas y con mi team, Team Dominus. No juego Magic Online así que debo hacer esfuerzos extras jajaja."
+        </blockquote>
+          <a href=" https://www.instagram.com/teamdominusmtg" target="_blank" class="social-link">
+    <i class="bi bi-instagram me-1"></i>Team Dominus
+  </a>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- Brackets y Top 8 -->
         <h2 class="view-heading">Brackets y Top 8</h2>
@@ -668,15 +736,14 @@ methods: {
         </div>
       </div>
   `,
-  data() {
-    return {
-      modalImg: '',
-    }
-  }
-};    
+        data() {
+          return {
+            modalImg: "",
+          };
+        },
+      };
 
-
-// ── Router ──────────────────────────────────────────────────────────
+      // ── Router ──────────────────────────────────────────────────────────
       const routes = [
         { path: "/", redirect: "/standing" },
         { path: "/standing", component: Standing },
