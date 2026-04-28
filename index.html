@@ -19,7 +19,7 @@
         --surface: #161920;
         --surface-2: #1e2130;
         --border: #2a2f45;
-        --text: #e2e6f0;
+        --text: #fdfdff;
         --muted: #7a8099;
         --accent: #c89b3c;
         --accent-dim: rgba(200, 155, 60, 0.12);
@@ -541,10 +541,11 @@ const Metagame = {
               <blockquote class="blockquote" style="font-size:0.95rem; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 1rem;">
                 "Escogí ese mazo porque me gusta... Creo que responde bien por su versatilidad, el potencial de toolbox gracias a
                 <a href="https://scryfall.com/card/rvr/1/karn-the-great-creator" target="_blank" style="color:var(--accent);">Karn the Great Creator</a>.
-                El desafío más interesante es buscar un equilibrio para interacciones tempranas. Chalice of the Void es una buena adición, pero tengo dudas en la cantidad.
-                Mi otra alternativa es jugar con
-                <a href="https://scryfall.com/card/cmm/812/warping-wail" target="_blank" style="color:var(--accent);">Warping Wail</a>,
-                porque una de las mayores dificultades es remover drops de uno del oponente."
+                El desafío más interesante es buscar un equilibrio para interacciones tempranas. Chalice of the Void es una buena adición, pero tengo dudas en la cantidad uno o dos.
+                Uno funcionó bien , pero no lo vi mucho, así que en mis proximos testeos incluiré una segunda copia.
+                Mi otra alternativa es jugar con más
+                <a href="https://scryfall.com/card/cmm/812/warping-wail" target="_blank" style="color:var(--accent);">Warping Wail</a>, Una de las dificultadres mayores del mazo es remover Drops uno, tale como Ragavan, Tamiyo, y con esta carta podemos detener la carrera de Boros Energy, sacando Guide of souls entre otros.
+                
               </blockquote>
             </div>
           </div>
@@ -585,6 +586,22 @@ const Metagame = {
             </div>
           </div>
         </div>
+        <div class="col-12 col-md-6">
+          <div class="card bg-dark border-secondary shadow-sm">
+            <div class="card-body p-2">
+              <img
+                src="./assets/1st.png"
+                alt="1st Place RCQ25"
+                class="img-fluid rounded"
+                style="cursor:pointer;"
+                data-bs-toggle="modal"
+                data-bs-target="#imgModal"
+                @click="modalImg = './assets/1st.png'"
+              >
+            </div>
+          </div>
+
+
       </div>
 
       <!-- Modal -->
