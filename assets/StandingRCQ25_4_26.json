@@ -380,7 +380,7 @@
     "Decklist": "Living End",
     "keyCard": "Living End",
     "imgRoute": "./assets/LivingEnd.jpg",
-    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
+    "decklistUrl": "https://www.mtggoldfish.com/deck/7758050#paper",
     "Badge": ""
   },
   {
@@ -396,7 +396,7 @@
     "Decklist": "Boros Energy",
     "keyCard": "Guide of Souls",
     "imgRoute": "./assets/Guide.jpg",
-    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
+    "decklistUrl": "https://www.mtggoldfish.com/deck/7758059#paper",
     "Badge": ""
   },
   {
@@ -412,7 +412,7 @@
     "Decklist": "Zoo Reanimator",
     "keyCard": "Leyline of the Guildpact",
     "imgRoute": "./assets/Leyline.jpg",
-    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
+    "decklistUrl": "https://www.mtggoldfish.com/deck/7758109#paper",
     "Badge": ""
   },
   {
@@ -428,7 +428,7 @@
     "Decklist": "Izzet Affinity",
     "keyCard": "Kappa Cannoneer",
     "imgRoute": "./assets/Kappa.jpg",
-    "decklistUrl": "https://drive.google.com/drive/folders/12UwRELQ14Gupwqc6BqoWtQVqLAHwCj3h",
+    "decklistUrl": "https://www.mtggoldfish.com/deck/7758119#paper",
     "Badge": ""
   }
 ]
